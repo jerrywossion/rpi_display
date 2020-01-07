@@ -1,42 +1,19 @@
 import time
+from PIL import ImageFont
 
 from app import App
 from tab import Tab
+from uibase import UIBase
+from label import Label
 
 
 if __name__ == '__main__':
     tab = Tab((128, 128), (0, 0))
-    app = App(tab)
-
-    tab.append(None)
-    app.run_once()
-    time.sleep(1)
-
-    tab.append(None)
-    app.run_once()
-    time.sleep(1)
-
-    tab.append(None)
-    app.run_once()
-    time.sleep(1)
-
-    tab.append(None)
-    app.run_once()
-    time.sleep(1)
-
+    font = ImageFont.truetype("?.ttf", 24)
+    tab.append(Label((0, 0), "Hello world, This is a very very long text", font, True))
     tab.set_index(0)
-    app.run_once()
-    time.sleep(1)
 
-    tab.set_index(1)
-    app.run_once()
-    time.sleep(1)
+    app = App(tab)
+    app.run()
 
-    tab.set_index(2)
-    app.run_once()
-    time.sleep(1)
-
-    tab.set_index(3)
-    app.run_once()
-    time.sleep(1)
 

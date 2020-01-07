@@ -39,11 +39,13 @@ class Tab(UIBase):
     def append(self, component):
         self.components.append(component)
         self.tabs += 1
-        self.update_dots()
 
     def set_index(self, index):
         self.index = index
-        self.update_dots()
 
     def render(self):
-        pass
+        self.update_dots()
+        if self.index in range(0, self.tabs):
+            component = self.components[self.index]
+            component.render()
+            self.image.paste(component.image, component.box)
