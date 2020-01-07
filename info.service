@@ -1,0 +1,10 @@
+[Unit]
+Description=Display system info in tiny screen
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/workspace/rpi_display/src/info.py
+KillSignal=SIGINT
+
+[Install]
+WantedBy=default.target
