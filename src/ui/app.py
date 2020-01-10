@@ -7,10 +7,8 @@ class App:
 
     def run(self, display):
         while True:
-            self.content.render()
-            display(self.content.image)
+            display(self.content.render())
             time.sleep(0.05)
 
-    def run_once(self):
-        self.content.render()
-        self.content.image.show()
+    def run_once(self, display):
+        display(self.content.render())
