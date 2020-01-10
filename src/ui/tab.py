@@ -3,7 +3,7 @@ from aggdraw import Draw
 from aggdraw import Pen
 from aggdraw import Brush
 
-from uibase import UIBase
+from .uibase import UIBase
 
 
 class Tab(UIBase):

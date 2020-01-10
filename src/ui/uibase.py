@@ -3,6 +3,7 @@ from PIL import Image
 
 class UIBase:
     def __init__(self, size, pos):
+        print(size)
         self.width = size[0]
         self.height = size[1]
         self.image = Image.new("RGB", size, "BLACK")

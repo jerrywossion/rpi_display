@@ -1,7 +1,7 @@
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
-from uibase import UIBase
+from .uibase import UIBase
 
 
 class Label(UIBase):
